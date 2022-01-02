@@ -6,9 +6,20 @@ import altair as alt
 
 df = pd.DataFrame(np.random.randn(100,3),columns='A B C'.split())
 
-chart = alt.Chart(df).mark_circle().encode(x='a',y='b')
+st.map()
 
-st.altair_chart(chart)
+st.graphviz_chart("""
+digraph{
+    watch -> like
+    like -> share
+    share -> subscribe
+    share -> watch
+}
+""")
+
+chart = alt.Chart(df).mark_circle().encode(x='A',y='B')
+
+st.altair_chart(chart, use_container_width=True)
 
 fig, ax = plt.subplots()
 
