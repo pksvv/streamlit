@@ -6,12 +6,13 @@ import altair as alt
 
 df = pd.DataFrame(np.random.randn(100,3),columns='A B C'.split())
 
-city = pd.DataFrame({'awesome cities': ['Carlsbad','Montreal'],
-                    'lat':[33.1581,45.4983],
-                    'lon':[117.3506,73.6608]}
+city = pd.DataFrame({"awesome cities": ['Sonipat','Washington'],
+                    "lat":[28.9931,47.7511],
+                    "lon":[77.0151,120.7401]}
                     )
 
 st.map(city)
+st.map()
 
 st.graphviz_chart("""
 digraph{
