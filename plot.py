@@ -2,8 +2,13 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import altair as alt
 
 df = pd.DataFrame(np.random.randn(100,3),columns='A B C'.split())
+
+chart = alt.Chart(df).mark_circle().encode(x='a',y='b')
+
+st.altair_chart(chart)
 
 fig, ax = plt.subplots()
 
