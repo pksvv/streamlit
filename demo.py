@@ -12,3 +12,5 @@ st.markdown(""" # h1 tag
 :sunglasses:""",True)
 
 st.latex(r"""2x + \frac{2}{3}x^{\frac{3}{2}} + \frac{1}{x}\Biggr|_{1}^{9}""")
+
+st.write("Vipul","Gaur","Learning Streamlit")
