@@ -40,3 +40,7 @@ st.line_chart(df)
 st.area_chart(df)
 st.bar_chart(df)
 st.write(df)
+
+st.image('scr.png')
+
+st.audio('audio.aifc')
